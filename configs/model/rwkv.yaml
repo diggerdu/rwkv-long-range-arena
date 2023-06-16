@@ -1,0 +1,7 @@
+_name_: rwkv
+
+config:
+  model_type: RWKV # or RWKV-ffnPre
+  n_embd: 768 
+  time_shift: 1
+  n_layer: 8

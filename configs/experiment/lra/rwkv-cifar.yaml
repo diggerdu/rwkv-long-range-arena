@@ -1,0 +1,26 @@
+# @package _global_
+defaults:
+  - /pipeline: cifar
+  - /model: rwkv
+  - override /scheduler: cosine_warmup
+
+decoder:
+  mode: pool
+
+loader:
+  batch_size: 64
+
+optimizer:
+  lr: 0.01
+  weight_decay: 0.05
+
+scheduler:
+  num_training_steps: 50000 # 20 epochs
+  num_warmup_steps: 5000
+
+trainer:
+  max_epochs: 20
+
+train:
+  seed: 3333
+  interval: step
